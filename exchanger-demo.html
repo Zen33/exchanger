@@ -44,6 +44,7 @@
         }
     </style>
     <script src="jquery.min.js"></script>
+    <script src="jquery.exchanger.1.0.js"></script>
 </head>
 <body>
     <script>
@@ -109,44 +110,44 @@
                 }
             };
             $(function() {
-                $('#testArea').exchanger({
+                $('.demo').exchanger({
                     data: demoData
                 });
-                $('#testArea2').exchanger({
-                    data: demoData,
-                    'up': {
-                        title: 'up',
-                        btn: true
-                    },
-                    'down': {
-                        title: 'down',
-                        btn: true
-                    },
-                    'remove': {
-                        btn: false
-                    },
-                    'clear': {
-                        title: 'clear',
-                        btn: true
-                    }
-                });
-                $('#testArea3').exchanger({
-                    // data: demoData,
-                    'up': {
-                        title: '上上',
-                        btn: true
-                    },
-                    'down': {
-                        title: '下下',
-                        btn: true
-                    },
-                    'remove': {
-                        btn: false
-                    },
-                    'clear': {
-                        btn: false
-                    }
-                });
+                // $('#testArea2').exchanger({
+                //     data: demoData,
+                //     'up': {
+                //         title: 'up',
+                //         btn: true
+                //     },
+                //     'down': {
+                //         title: 'down',
+                //         btn: true
+                //     },
+                //     'remove': {
+                //         btn: false
+                //     },
+                //     'clear': {
+                //         title: 'clear',
+                //         btn: true
+                //     }
+                // });
+                // $('#testArea3').exchanger({
+                //     // data: demoData,
+                //     'up': {
+                //         title: '上上',
+                //         btn: true
+                //     },
+                //     'down': {
+                //         title: '下下',
+                //         btn: true
+                //     },
+                //     'remove': {
+                //         btn: false
+                //     },
+                //     'clear': {
+                //         btn: false
+                //     }
+                // });
                 $('button.getData').click(function() {
                     $('.exchanger').each(function(i) {
                         alert('第' + (i + 1) + '个选择器数据：' + JSON.stringify($(this).exchanger('data')));
@@ -160,9 +161,9 @@
             });
         })();
     </script>
-    <div id="testArea"></div>
-    <div id="testArea2"></div>
-    <div id="testArea3"></div>
+    <div class="demo"></div>
+    <div id="testArea2" class="demo"></div>
+    <div id="testArea3" class="demo"></div>
     <br />
     <br />
     <button class="getData">获取当前数据</button>
